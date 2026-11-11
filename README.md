@@ -3,6 +3,7 @@ This repository contains the simulation input files, topologies, analysis script
 "STAM Drives Exosome Biogenesis through an ESCRT-Independent Condensation Mechanism".
 Repository Structure
 The codebase is organized into three sequential modules corresponding to the main simulation workflows:
+.
 ├── 01_condensate/      # Module 1: STAM self-assembly & phase separation simulations
 ├── 02_membrane/    # Module 2: Lipid bilayer modeling and property calculations
 ├── 03_condensate_membrane/    # Module 3: Condensate-membrane interaction and curvature dynamics
