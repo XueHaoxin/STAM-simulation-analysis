@@ -25,14 +25,14 @@ print(f"Start time: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
 # In[4]:
 
 
-dir='PA_Ca50'
+dir='PA_Ca50'  #stam_cluster_withPA_Ca50
 
 
 # In[5]:
 
 
-TPR=r"~/260901_stam_cluster_membrane_scaled_1.2_re2/stam_cluster_withPA_Ca50/non-Solvent_pbcwhole_conect.pdb"
-XTC=r"~/260901_stam_cluster_membrane_scaled_1.2_re2/stam_cluster_withPA_Ca50/non-Solvent_pbcwhole.xtc"
+TPR=r"non-Solvent_pbcwhole_conect.pdb"
+XTC=r"non-Solvent_pbcwhole.xtc"
 
 
 # In[6]:
