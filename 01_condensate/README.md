@@ -28,4 +28,5 @@ gmx_mpi sasa -f protein_only.xtc -s protein.tpr -probe 0.191 -o sasa.xvg
 
 Panels d-f are based on interchain contact statistics. Keep `vdw_def.py` in the same directory as `Inter Contact-map.py`.
 
+Running analysis code need MDAnalysis.(version 2.10.0 we used)
 For MDAnalysis installation instructions, see the [MDAnalysis installation guide](https://www.mdanalysis.org/pages/installation_quick_start/).
