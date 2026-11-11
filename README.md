@@ -11,6 +11,8 @@ The codebase is organized into three sequential modules corresponding to the mai
 ├── LICENSE                    # MIT License
 └── README.md                  # Project overview and reproduction guidelines
 ```
+Example data are available in the [Releases](https://github.com/XueHaoxin/STAM-simulation-analysis/releases) section.
+
 # License & Citation  
 Code License: This software and custom analysis scripts are released under the MIT License. See the LICENSE file for details.  
 
