@@ -16,3 +16,5 @@ Keep `get_chainID_resid.py` alongside `condensate_membrane_contacts.py`.
 Update input file paths before running. The residue_membrane_contacts.py reads `contact_details.csv` from each immediate subfolder. The curvature summary script expects `<replicate_folder>/mean_curvature/<system_name>_mean_curvature_max.csv`.
 
 Requirements we used: MDAnalysis(version 2.10.0), MembraneCurvature(version 1.1.2)
+
+Example data are available in the [Releases](https://github.com/XueHaoxin/STAM-simulation-analysis/releases) section.
