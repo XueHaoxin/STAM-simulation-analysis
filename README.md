@@ -1,8 +1,8 @@
 # STAM-simulation-analysis
-This repository contains the simulation input files, topologies, analysis scripts, and workflow documentation supporting the computational findings in the manuscript:
-"STAM Drives Exosome Biogenesis through an ESCRT-Independent Condensation Mechanism".
-Repository Structure
-The codebase is organized into three sequential modules corresponding to the main simulation workflows:
+This repository contains the simulation input files, topologies, analysis scripts, and workflow documentation supporting the computational findings in the manuscript:  
+"STAM Drives Exosome Biogenesis through an ESCRT-Independent Condensation Mechanism".  
+# Repository Structure  
+The codebase is organized into three sequential modules corresponding to the main simulation workflows:  
 ```text
 .
 ├── 01_condensate/             # Module 1: STAM self-assembly & phase separation simulations
@@ -11,8 +11,8 @@ The codebase is organized into three sequential modules corresponding to the mai
 ├── LICENSE                    # MIT License
 └── README.md                  # Project overview and reproduction guidelines
 ```
-License & Citation
-Code License: This software and custom analysis scripts are released under the MIT License. See the LICENSE file for details.
+# License & Citation  
+Code License: This software and custom analysis scripts are released under the MIT License. See the LICENSE file for details.  
 
-Citation: If you use these models, topologies, or custom scripts in your research, please cite the corresponding research article:
+Citation: If you use these models, topologies, or custom scripts in your research, please cite the corresponding research article:  
 Zhang, K. Xue Haoxin. et al. STAM Drives Exosome Biogenesis through an ESCRT-Independent Condensation Mechanism. (2026).
