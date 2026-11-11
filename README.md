@@ -1,5 +1,5 @@
 # STAM-simulation-analysis
-This repository contains the simulation input files, topologies, analysis scripts, and workflow documentation supporting the computational findings in the manuscript:  
+This repository contains the simulation analysis scripts and workflow documentation supporting the computational findings in the manuscript:  
 "STAM Drives Exosome Biogenesis through an ESCRT-Independent Condensation Mechanism".  
 # Repository Structure  
 The codebase is organized into three sequential modules corresponding to the main simulation workflows:  
