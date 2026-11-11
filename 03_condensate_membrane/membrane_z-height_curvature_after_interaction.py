@@ -214,82 +214,6 @@ surface_upper_leaflet_stop_meancurvature=curvature_upper_leaflet_stop.results.av
 
 surface_lower_leaflet_stop_meancurvature=curvature_lower_leaflet_stop.results.average_mean
 
-def plot_contours(title, results, label, levels_, cm, vmin=None, vmax=None, save_path=None):
-    """
-    Plot contours of MembraneCurvature results.
-    Additional controls for colorbar range (vmin, vmax) and saving the figure.
-
-    Parameters
-    ----------
-    results : list
-        List with results by leaflets as elements [lower_leaflet, upper_leaflet]
-    label : str
-        Label for the colorbar.
-    levels_ : int
-        Number of contour levels.
-    cm : str
-        Colormap.
-    vmin, vmax : float or None
-        Fixed color scale limits. If None, automatic symmetric or data range is used.
-    save_path : str or None
-        If provided, the figure is saved to this path.
-    """
-    import numpy as np
-    import matplotlib.pyplot as plt
-    from scipy import ndimage 
-
-    leaflets = ['Upper','Lower']
-
-    fig, [ax1, ax2] = plt.subplots(ncols=2, figsize=(4, 3.5), dpi=200)
-
-    finite = [rs[np.isfinite(rs)] for rs in results]
-    max_ = max((np.max(np.abs(v)) for v in finite if v.size), default=0.0)
-
-    plt.suptitle(title, fontsize=8, y=0.8)
-
-    for ax, rs, lf in zip((ax1, ax2), results, leaflets):
-        rs = np.asarray(rs).T
-
-        if vmin is None and vmax is None:
-            if np.min(rs) < 0 < np.max(rs):
-                use_vmin, use_vmax = -max_, max_
-                sym = True
-            else:
-                use_vmin, use_vmax = np.min(rs), np.max(rs)
-                sym = False
-        else:
-            if vmin is None or vmax is None:
-                if np.min(rs) < 0 < np.max(rs):
-                    use_vmin, use_vmax = -max_, max_
-                    sym = True
-                else:
-                    use_vmin, use_vmax = np.min(rs), np.max(rs)
-                    sym = False
-            else:
-                use_vmin, use_vmax = vmin, vmax
-                sym = use_vmin < 0 < use_vmax
-
-        levs = np.linspace(use_vmin, use_vmax, levels_)
-        im = ax.contourf(
-            rs, cmap=cm, origin='lower', levels=levs, alpha=0.95,
-            vmin=use_vmin, vmax=use_vmax
-        )
-        tcs = [use_vmin, 0, use_vmax] if sym else [use_vmin, use_vmax]
-
-        ax.set_aspect('equal')
-        ax.set_title(f'{lf} Leaflet', fontsize=6)
-        ax.axis('off')
-
-        cbar = plt.colorbar(
-            im, ticks=tcs, orientation='horizontal', ax=ax,
-            shrink=0.7, aspect=10, pad=0.05
-        )
-        cbar.ax.tick_params(labelsize=4, width=0.5)
-        cbar.set_label(label, fontsize=6, labelpad=2)
-
-    plt.tight_layout()
-    if save_path is not None:
-        plt.savefig(save_path, dpi=200, bbox_inches='tight')
 # In[26]:
 
 
@@ -365,6 +289,14 @@ def plot_contours(title, results, label, levels_, cm,
         ax.set_aspect('equal')
         ax.set_title(f'{lf} Leaflet', fontsize=6)
         ax.axis('off')
+        
+        cbar = plt.colorbar(
+            im, ticks=tcs, orientation='horizontal', ax=ax,
+            shrink=0.7, aspect=10, pad=0.05
+        )
+
+        cbar.ax.tick_params(labelsize=4, width=0.5)
+        cbar.set_label(label, fontsize=6, labelpad=2)
 
     plt.tight_layout()
 
